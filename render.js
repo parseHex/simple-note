@@ -1,4 +1,7 @@
 const css = `
+body {
+	background-color: #F5F5F5;
+}
 textarea {
 	font-size: 14.5px;
 	padding: 8px;
