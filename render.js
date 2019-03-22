@@ -6,7 +6,7 @@ body {
 textarea, input {
 	font-size: 16px;
 	padding: 8px;
-	line-height: 16px;
+	line-height: 23px;
 }
 `;
 const head = /*html*/`<head><style>${css}</style></head>`;
