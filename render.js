@@ -1,9 +1,10 @@
 const css = `
 body {
 	background-color: #F5F5F5;
+	font-size: 18px;
 }
-textarea {
-	font-size: 14.5px;
+textarea, input {
+	font-size: 16px;
 	padding: 8px;
 	line-height: 16px;
 }
@@ -74,8 +75,8 @@ function newNote() {
 					placeholder="Note content"
 					id="content"
 					name="content"
-					rows="35"
-					cols="80"
+					rows="30"
+					cols="50"
 				></textarea>
 				<br />
 				<button type="submit" name="save" value="1">Save</button>
@@ -105,8 +106,8 @@ function editNote(note) {
 					placeholder="Note content"
 					id="content"
 					name="content"
-					rows="35"
-					cols="80"
+					rows="30"
+					cols="50"
 				>${note.content}</textarea>
 				<br />
 				<button type="submit" name="save" value="1">Save</button>
