@@ -3,7 +3,6 @@ const data = require('./data');
 const render = require('./render');
 
 const server = http.createServer(async function (req, res) {
-	const notes = data.get();
 	const headers = {
 		'content-type': 'text/html',
 	};
@@ -13,7 +12,7 @@ const server = http.createServer(async function (req, res) {
 	const query = parseQ(req.url);
 
 	if (req.url === '/') {
-		resContent = render.home(notes);
+		resContent = render.home(data.get());
 	}
 	if (req.url.includes('/delete-note')) {
 		await deleteNote(query.id);
@@ -26,6 +25,7 @@ const server = http.createServer(async function (req, res) {
 			headers.location = '/';
 			status = 302;
 		} else {
+			const notes = data.get();
 			for (let i = 0; i < notes.length; i++) {
 				if (notes[i].id === query.id) {
 					resContent = render.editNote(notes[i]);

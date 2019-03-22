@@ -92,6 +92,7 @@ function editNote(note) {
 		${head}
 		<body>
 			<form>
+				<input type="hidden" name="id" value="${note.id}" />
 				<input
 					placeholder="Note title"
 					id="title"
