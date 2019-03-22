@@ -51,6 +51,7 @@ const server = http.createServer(async function (req, res) {
 });
 
 function parseQ(url) {
+	url = url.replace(/\+/g, '%20');
 	const q = {};
 	const parts = url.substr(url.indexOf('?') + 1).split('&');
 	for (let i = 0; i < parts.length; i++) {
